@@ -1,0 +1,277 @@
+@media (max-width: 1024px) {
+
+	.wrapper {
+
+		.weather {
+
+			.weather-content {
+				width: 900px;
+				padding: 30px 40px 0 40px;
+
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	h1 {
+		font-size: 50px;
+		font-size: 5rem;
+	}
+
+	.wrapper {
+
+		.weather {
+
+			.weather-content {
+				width: 700px;
+				padding: 20px 30px 10px 30px;
+
+				.forecast {
+
+					h2 {
+						font-size: 50px;
+						font-size: 5rem;
+					}
+				}
+				
+				.date {
+					h3 {
+						font-size: 20px;
+						font-size: 2rem;
+					}
+				}
+
+				.location {
+
+					h3 {
+						font-size: 35px;
+						font-size: 3.5rem;
+					}
+				}
+				
+				.temp {
+
+					.degrees {
+						font-size: 80px;
+						font-size: 8rem;
+					}
+				}
+
+				.icon {
+					margin: 20px 0 0 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.wrapper {
+
+		header {
+
+			form.weather-form {
+
+				input {
+					width: 300px;
+				}
+			}	
+		}
+
+		.weather {
+
+			.weather-content {
+				width: 560px;
+
+				.date {
+
+					h3 {
+						font-size: 18px;
+						font-size: 1.8rem;
+					}
+				}
+
+				.temp {
+					.degrees {
+						font-size: 70px;
+						font-size: 7rem;
+					}
+
+					.feels-like {
+						font-size: 28px;
+						font-size: 2.8rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+	h1 {
+		font-size: 40px;
+		font-size: 4rem;
+		line-height: 50px;
+
+	}
+
+	.wrapper {
+
+		header {
+
+			form.weather-form {
+				input {
+					width: 280px;
+				}
+			}	
+		}
+
+		.weather {
+			
+			.weather-content {
+				width: 460px;
+				border: 0;
+
+				.forecast {
+					width: 70%;
+					float: left;
+					margin: 10px 0;
+
+					h2 {
+						font-size: 40px;
+						font-size: 4rem;
+					}
+				}
+
+				.date {
+
+					h3 {
+						font-size: 14px;
+						font-size: 1.4rem;
+					}
+				}
+
+				.location {
+
+					h3 {
+						font-size: 30px;
+						font-size: 3rem;
+					}
+				}
+
+				.temp {
+					.degrees {
+						font-size: 60px;
+						font-size: 6rem;
+					}
+
+					.feels-like {
+						font-size: 25px;
+						font-size: 2.5rem;
+					}
+
+					.details {
+						font-size: 18px;
+						font-size: 1.8rem;
+
+						.wds, .wg, .h, .p {
+							margin: 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+
+	h1 {
+		font-size: 35px;
+		font-size: 3.5rem;
+		line-height: 40px;
+	}
+
+	.wrapper {
+
+		header {
+
+			form.weather-form {
+
+				input {
+					border-bottom: 3px solid $yellow;;
+				}
+			}	
+		}
+
+		.weather {
+
+			.weather-content {
+				width: 300px;
+				border: 0;
+				padding: 0 0 0 10px;
+
+				.forecast {
+					width: 100%;
+					float: none;
+					margin: 0;
+
+					h2 {
+						font-size: 35px;
+						font-size: 3.5rem;
+						text-align: center;
+					}
+				}
+
+				.date {
+					width: 100%;
+					float: none;
+					margin: 5px 0;
+
+					h3 {
+						font-size: 14px;
+						font-size: 1.4rem;
+						text-align: center;
+					}
+				}
+
+				.location {
+
+					h3 {
+						font-size: 20px;
+						font-size: 2rem;
+						text-align: center;
+					}
+				}
+
+				.temp {
+					.degrees {
+						font-size: 55px;
+						font-size: 5.5rem;
+					}
+
+					.feels-like {
+						font-size: 18px;
+						font-size: 1.8rem;
+					}
+
+					.details {
+						font-size: 14px;
+						font-size: 1.4rem;
+
+						.wds, .wg, .h, .p {
+							margin: 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

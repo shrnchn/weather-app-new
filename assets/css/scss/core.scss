@@ -1,0 +1,27 @@
+// Typography
+@import url(http://fonts.googleapis.com/css?family=Bevan|Open+Sans:400,700);
+
+$bevan: 'Bevan', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+$normal: 400;
+$bold: 700;
+
+// Colours
+$blue: #3498db;
+$blue-dark: #2c3e50;
+$slate: #34495e;
+$gray: #A7A9AC;
+$yellow: #F1C40F;
+
+
+@mixin opensans {
+	font-family: $opensans;
+	font-weight: $normal;
+	color: white;
+}
+
+@mixin bevan {
+	font-family: $bevan;
+	font-color: $slate;
+	letter-spacing: 1px;
+}

@@ -172,6 +172,16 @@ p {
 
 .wrapper header {
   margin: 20% auto 0 auto; }
+  .wrapper header button {
+    font-size: 15px;
+    font-size: 1.5rem;
+    background: #F1C40F;
+    color: #34495e;
+    padding: 10px;
+    border: 1px solid white;
+    display: block;
+    margin: 50px auto;
+    outline: 0; }
   .wrapper header form.weather-form {
     text-align: center; }
     .wrapper header form.weather-form ::-webkit-input-placeholder {

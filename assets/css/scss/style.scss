@@ -28,6 +28,18 @@ p {
 	header {
 		margin: 20% auto 0 auto;
 
+		button {
+			font-size: 15px;
+			font-size: 1.5rem;
+			background: $yellow;
+			color: $slate;
+			padding: 10px;
+			border: 1px solid white;
+			display: block;
+			margin: 50px auto;
+			outline: 0;
+		}
+
 		form.weather-form {
 			text-align: center;
 

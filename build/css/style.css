@@ -188,7 +188,7 @@ h1 {
   text-align: center; }
 
 p {
-  margin: 40px auto;
+  margin: 40px auto 30px auto;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: white;
@@ -200,7 +200,7 @@ p {
 .wrapper .search {
   text-align: center; }
   .wrapper .search form.weather-form {
-    margin: 50px auto;
+    margin: 0 auto;
     text-align: center; }
     .wrapper .search form.weather-form ::-webkit-input-placeholder {
       /* WebKit browsers */
@@ -271,9 +271,10 @@ p {
     margin: 0 auto;
     padding: 40px 50px 0 50px;
     border: 2px solid white;
+    border-radius: 5px;
     display: none; }
     .wrapper .weather .weather-content .forecast {
-      width: 70%;
+      width: 60%;
       float: left;
       margin: 10px 0; }
       .wrapper .weather .weather-content .forecast h2 {
@@ -282,7 +283,7 @@ p {
         font-size: 6rem;
         margin: 0; }
     .wrapper .weather .weather-content .date {
-      width: 30%;
+      width: 40%;
       float: left;
       margin: 25px 0; }
       .wrapper .weather .weather-content .date h3 {
@@ -356,7 +357,7 @@ p {
       margin: 20px 0 0 0; } }
 
 @media (max-width: 640px) {
-  .wrapper header form.weather-form input {
+  .wrapper .search form.weather-form input {
     width: 300px; }
   .wrapper .weather .weather-content {
     width: 560px; }
@@ -375,13 +376,18 @@ p {
     font-size: 40px;
     font-size: 4rem;
     line-height: 50px; }
-  .wrapper header form.weather-form input {
+  p {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .wrapper .search form.weather-form input {
     width: 280px; }
+  .wrapper .search form.weather-form input[type=submit] {
+    margin: 20px 0 0 0; }
   .wrapper .weather .weather-content {
-    width: 460px;
+    width: 400px;
+    padding: 20px;
     border: 0; }
     .wrapper .weather .weather-content .forecast {
-      width: 70%;
       float: left;
       margin: 10px 0; }
       .wrapper .weather .weather-content .forecast h2 {
@@ -397,11 +403,11 @@ p {
       font-size: 60px;
       font-size: 6rem; }
     .wrapper .weather .weather-content .temp .feels-like {
-      font-size: 25px;
-      font-size: 2.5rem; }
+      font-size: 2px;
+      font-size: 2rem; }
     .wrapper .weather .weather-content .temp .details {
-      font-size: 18px;
-      font-size: 1.8rem; }
+      font-size: 15px;
+      font-size: 1.5rem; }
       .wrapper .weather .weather-content .temp .details .wds, .wrapper .weather .weather-content .temp .details .wg, .wrapper .weather .weather-content .temp .details .h, .wrapper .weather .weather-content .temp .details .p {
         margin: 10px 0; } }
 
@@ -410,7 +416,7 @@ p {
     font-size: 35px;
     font-size: 3.5rem;
     line-height: 40px; }
-  .wrapper header form.weather-form input {
+  .wrapper .search form.weather-form input {
     border-bottom: 3px solid #F1C40F; }
   .wrapper .weather .weather-content {
     width: 300px;

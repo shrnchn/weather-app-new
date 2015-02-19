@@ -71,7 +71,7 @@
 
 	.wrapper {
 
-		header {
+		.search {
 
 			form.weather-form {
 
@@ -119,13 +119,22 @@
 
 	}
 
+	p {
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+
 	.wrapper {
 
-		header {
+		.search {
 
 			form.weather-form {
 				input {
 					width: 280px;
+				}
+
+				input[type=submit] {
+					margin: 20px 0 0 0;
 				}
 			}	
 		}
@@ -133,11 +142,11 @@
 		.weather {
 			
 			.weather-content {
-				width: 460px;
+				width: 400px;
+				padding: 20px;
 				border: 0;
 
 				.forecast {
-					width: 70%;
 					float: left;
 					margin: 10px 0;
 
@@ -170,13 +179,13 @@
 					}
 
 					.feels-like {
-						font-size: 25px;
-						font-size: 2.5rem;
+						font-size: 2px;
+						font-size: 2rem;
 					}
 
 					.details {
-						font-size: 18px;
-						font-size: 1.8rem;
+						font-size: 15px;
+						font-size: 1.5rem;
 
 						.wds, .wg, .h, .p {
 							margin: 10px 0;
@@ -198,7 +207,7 @@
 
 	.wrapper {
 
-		header {
+		.search {
 
 			form.weather-form {
 

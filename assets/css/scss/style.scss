@@ -17,7 +17,7 @@ h1 {
 }
 
 p {
-	margin: 40px auto;
+	margin: 40px auto 30px auto;
 	@include opensans;
 	font-size: 20px;
 	font-size: 2rem;
@@ -33,7 +33,7 @@ p {
 		text-align: center;
 
 		form.weather-form {
-			margin: 50px auto;
+			margin: 0 auto;
 			text-align: center;
 
 			::-webkit-input-placeholder { /* WebKit browsers */
@@ -91,10 +91,11 @@ p {
 			margin: 0 auto;
 			padding: 40px 50px 0 50px;
 			border: 2px solid white;
+			border-radius: 5px;
 			display: none;
 
 			.forecast {
-				width: 70%;
+				width: 60%;
 				float: left;
 				margin: 10px 0;
 
@@ -107,7 +108,7 @@ p {
 			}
 			
 			.date {
-					width: 30%;
+					width: 40%;
 					float: left;
 					margin: 25px 0;
 

@@ -148,7 +148,7 @@ $(function() {
 
 
     // get user's geo location, display weather info
-    $('.search-current-location').on('click', function(e){
+    $('#search-current-loc').on('click', function(e){
         e.preventDefault();
         getGeo();
         $('header').css('margin', '0 auto');

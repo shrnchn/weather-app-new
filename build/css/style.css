@@ -147,6 +147,31 @@ img {
 * {
   -webkit-tap-highlight-color: transparent; }
 
+.button {
+  position: relative;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  font-size: 1.5rem;
+  background: #F1C40F;
+  color: white;
+  text-shadow: 1px 1px #2c3e50;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  box-shadow: 0px 6px 0px #876E02; }
+  .button:active {
+    cursor: pointer;
+    box-shadow: 0px 2px 0px #876E02;
+    position: relative;
+    top: 7px; }
+
 html, body {
   max-width: 100%;
   font-size: 10px;
@@ -163,7 +188,7 @@ h1 {
   text-align: center; }
 
 p {
-  margin: 0;
+  margin: 40px auto;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: white;
@@ -172,53 +197,64 @@ p {
 
 .wrapper header {
   margin: 20% auto 0 auto; }
-  .wrapper header button {
-    font-size: 15px;
-    font-size: 1.5rem;
-    background: #F1C40F;
-    color: #34495e;
-    padding: 10px;
-    border: 1px solid white;
-    display: block;
+.wrapper .search {
+  text-align: center; }
+  .wrapper .search form.weather-form {
     margin: 50px auto;
-    outline: 0; }
-  .wrapper header form.weather-form {
     text-align: center; }
-    .wrapper header form.weather-form ::-webkit-input-placeholder {
+    .wrapper .search form.weather-form ::-webkit-input-placeholder {
       /* WebKit browsers */
       color: white; }
-    .wrapper header form.weather-form :-moz-placeholder {
+    .wrapper .search form.weather-form :-moz-placeholder {
       /* Mozilla Firefox 4 to 18 */
       color: white;
       opacity: 1; }
-    .wrapper header form.weather-form ::-moz-placeholder {
+    .wrapper .search form.weather-form ::-moz-placeholder {
       /* Mozilla Firefox 19+ */
       color: white;
       opacity: 1; }
-    .wrapper header form.weather-form :-ms-input-placeholder {
+    .wrapper .search form.weather-form :-ms-input-placeholder {
       /* Internet Explorer 10+ */
       color: white; }
-    .wrapper header form.weather-form input {
+    .wrapper .search form.weather-form input {
       width: 400px;
       margin: 0 10px;
-      padding: 6px;
+      padding: 15px;
       background: none;
       border: none;
-      border-bottom: thick solid #F1C40F;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 400;
       color: white;
+      border-bottom: thick solid #F1C40F;
       font-size: 20px;
       font-size: 2rem;
       outline: none;
-      text-align: center; }
-    .wrapper header form.weather-form input[type=submit] {
-      margin: 20px auto 0 auto;
+      text-align: center;
+      display: inline-block; }
+    .wrapper .search form.weather-form input[type=submit] {
       width: 80px;
+      margin: 0;
+      position: relative;
+      margin: 0 auto;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      color: white;
+      font-weight: 700;
       font-size: 15px;
       font-size: 1.5rem;
-      padding: 10px;
-      border: 1px solid white; }
+      background: #F1C40F;
+      color: white;
+      text-shadow: 1px 1px #2c3e50;
+      padding: 15px 10px;
+      border: none;
+      border-radius: 5px;
+      outline: 0;
+      -webkit-transition: all 0.1s;
+      transition: all 0.1s;
+      box-shadow: 0px 6px 0px #876E02; }
+      .wrapper .search form.weather-form input[type=submit]:active {
+        cursor: pointer;
+        box-shadow: 0px 2px 0px #876E02;
+        position: relative;
+        top: 7px; }
 .wrapper .weather {
   margin: 50px auto;
   color: white; }

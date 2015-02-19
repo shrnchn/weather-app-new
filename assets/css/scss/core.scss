@@ -7,11 +7,12 @@ $normal: 400;
 $bold: 700;
 
 // Colours
-$blue: #3498db;
+$blue: #34495e;
+$blue-light: #2980b9;
 $blue-dark: #2c3e50;
-$slate: #34495e;
 $gray: #A7A9AC;
 $yellow: #F1C40F;
+$yellow-dark: #876E02;
 
 
 @mixin opensans {
@@ -22,6 +23,41 @@ $yellow: #F1C40F;
 
 @mixin bevan {
 	font-family: $bevan;
-	font-color: $slate;
+	font-color: $blue;
 	letter-spacing: 1px;
+}
+
+@mixin button {
+	position: relative;
+	margin: 0 auto;
+	@include opensans;
+	font-weight: $bold;
+	font-size: 15px;
+	font-size: 1.5rem;
+	background: $yellow;
+	color: white;
+	text-shadow: 1px 1px $blue-dark;
+	padding: 15px 10px;
+	border: none;
+	border-radius: 5px;
+	outline: 0;
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	transition: all 0.1s;
+	-webkit-box-shadow: 0px 6px 0px $yellow-dark;
+	-moz-box-shadow: 0px 6px 0px $yellow-dark;
+	box-shadow: 0px 6px 0px $yellow-dark;
+
+	&:active {
+		cursor: pointer;
+		-webkit-box-shadow: 0px 2px 0px $yellow-dark;
+		-moz-box-shadow: 0px 2px 0px $yellow-dark;
+		box-shadow: 0px 2px 0px $yellow-dark;
+		position: relative;
+		top: 7px;
+	}
+}
+
+.button {
+	@include button;
 }

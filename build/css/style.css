@@ -158,7 +158,7 @@ img {
   font-size: 1.5rem;
   background: #F1C40F;
   color: white;
-  text-shadow: 1px 1px #2c3e50;
+  text-shadow: 1px 1px #7f8c8d;
   padding: 15px 10px;
   border: none;
   border-radius: 5px;
@@ -198,7 +198,19 @@ p {
 .wrapper header {
   margin: 10% auto 0 auto; }
 .wrapper .search {
+  margin: 50px auto 0 auto;
   text-align: center; }
+  .wrapper .search a {
+    text-decoration: none; }
+  .wrapper .search span {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 15px;
+    font-size: 1.5rem;
+    color: white;
+    display: block;
+    margin: 30px auto 0 auto; }
   .wrapper .search form.weather-form {
     margin: 0 auto;
     text-align: center; }
@@ -228,7 +240,8 @@ p {
       font-size: 2rem;
       outline: none;
       text-align: center;
-      display: inline-block; }
+      display: inline-block;
+      border-radius: 0; }
     .wrapper .search form.weather-form input[type=submit] {
       width: 80px;
       margin: 0;
@@ -242,7 +255,7 @@ p {
       font-size: 1.5rem;
       background: #F1C40F;
       color: white;
-      text-shadow: 1px 1px #2c3e50;
+      text-shadow: 1px 1px #7f8c8d;
       padding: 15px 10px;
       border: none;
       border-radius: 5px;
@@ -380,46 +393,11 @@ p {
     font-size: 18px;
     font-size: 1.8rem; }
   .wrapper .search form.weather-form input {
-    width: 280px; }
+    border-bottom: 3px solid #F1C40F; }
   .wrapper .search form.weather-form input[type=submit] {
     margin: 20px 0 0 0; }
   .wrapper .weather .weather-content {
-    width: 400px;
-    padding: 20px;
-    border: 0; }
-    .wrapper .weather .weather-content .forecast {
-      float: left;
-      margin: 10px 0; }
-      .wrapper .weather .weather-content .forecast h2 {
-        font-size: 40px;
-        font-size: 4rem; }
-    .wrapper .weather .weather-content .date h3 {
-      font-size: 14px;
-      font-size: 1.4rem; }
-    .wrapper .weather .weather-content .location h3 {
-      font-size: 30px;
-      font-size: 3rem; }
-    .wrapper .weather .weather-content .temp .degrees {
-      font-size: 60px;
-      font-size: 6rem; }
-    .wrapper .weather .weather-content .temp .feels-like {
-      font-size: 2px;
-      font-size: 2rem; }
-    .wrapper .weather .weather-content .temp .details {
-      font-size: 15px;
-      font-size: 1.5rem; }
-      .wrapper .weather .weather-content .temp .details .wds, .wrapper .weather .weather-content .temp .details .wg, .wrapper .weather .weather-content .temp .details .h, .wrapper .weather .weather-content .temp .details .p {
-        margin: 10px 0; } }
-
-@media (max-width: 320px) {
-  h1 {
-    font-size: 35px;
-    font-size: 3.5rem;
-    line-height: 40px; }
-  .wrapper .search form.weather-form input {
-    border-bottom: 3px solid #F1C40F; }
-  .wrapper .weather .weather-content {
-    width: 300px;
+    width: 350px;
     border: 0;
     padding: 0 0 0 10px; }
     .wrapper .weather .weather-content .forecast {
@@ -453,3 +431,11 @@ p {
       font-size: 1.4rem; }
       .wrapper .weather .weather-content .temp .details .wds, .wrapper .weather .weather-content .temp .details .wg, .wrapper .weather .weather-content .temp .details .h, .wrapper .weather .weather-content .temp .details .p {
         margin: 10px 0; } }
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 35px;
+    font-size: 3.5rem;
+    line-height: 40px; }
+  .wrapper .weather .weather-content {
+    width: 350px; } }

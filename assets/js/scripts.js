@@ -39,10 +39,12 @@ $(function() {
                           //storing the data in variable
                           var w = data.current_observation;
 
+
                           var forecast = w.weather;
                           var location = w.display_location.full;
                           var date = w.local_time_rfc822;
-                          var dateTime = date.slice(0,16);
+                          var time = date.slice(16,25);
+                          var dateNoTime = date.slice(0,16);
                           var temp = w.temp_c;
                           var tempRounded = Math.round(temp);
                           var feelsLike = w.feelslike_c;
@@ -56,9 +58,9 @@ $(function() {
                           // dump string into the divs
                           $('.forecast h2').text(forecast);
                           $('.location h3').text(location);
-                          $('.date h3').text(dateTime);
-                          $('.degrees').text(tempRounded + '\u2103');
-                          $('.feels-like').text('Feels like ' + feelsRounded + '\u2103');
+                          $('.date h3').text(dateNoTime);
+                          $('.degrees').text(tempRounded + '°C');
+                          $('.feels-like').text('Feels like ' + feelsRounded + '°C');
                           $('.details .wds').text('Wind: ' + windDirection + ' ' + windSpeed + ' km/h');
                           $('.details .wg').text('Wind Gust: ' + windGust);
                           $('.details .h').text('Humidity: ' + humidity);
@@ -66,8 +68,8 @@ $(function() {
 
                           // display weather icons
                           var getIcons = function(){
-                              var iconURL = 'assets/icons/' + forecast.replace(/\s+/g,'').toLowerCase() + '.svg';
-                              var icon = $('.icon img').attr('src', iconURL);
+                              var iconURL = 'images/' + forecast.replace(/\s+/g,'').toLowerCase() + '.svg';
+                              $('.icon img').attr('src', iconURL);
                           };
 
                           // run function to get icons
@@ -109,7 +111,8 @@ $(function() {
                     var forecast = w.weather;
                     var location = w.display_location.full;
                     var date = w.local_time_rfc822;
-                    var dateTime = date.slice(0,16);
+                    var time = date.slice(17,19);
+                    var dateNoTime = date.slice(0,16);
                     var temp = w.temp_c;
                     var tempRounded = Math.round(temp);
                     var feelsLike = w.feelslike_c;
@@ -123,9 +126,9 @@ $(function() {
                     // dump string into the divs
                     $('.forecast h2').text(forecast);
                     $('.location h3').text(location);
-                    $('.date h3').text(dateTime);
-                    $('.degrees').text(tempRounded + '\u2103');
-                    $('.feels-like').text('Feels like ' + feelsRounded + '\u2103');
+                    $('.date h3').text(dateNoTime);
+                    $('.degrees').text(tempRounded + '°C');
+                    $('.feels-like').text('Feels like ' + feelsRounded + '°C');
                     $('.details .wds').text('Wind: ' + windDirection + ' ' + windSpeed + ' km/h');
                     $('.details .wg').text('Wind Gust: ' + windGust);
                     $('.details .h').text('Humidity: ' + humidity);
@@ -133,8 +136,14 @@ $(function() {
 
                     // display weather icons
                     var getIcons = function(){
-                        var iconURL = 'assets/icons/' + forecast.replace(/\s+/g,'').toLowerCase() + '.svg';
-                        var icon = $('.icon img').attr('src', iconURL);
+                        var iconURL = 'images/' + forecast.replace(/\s+/g,'').toLowerCase() + '.svg';
+
+                        if (time > 17 && forecast === 'Clear') {
+                            $('.icon img').attr('src', 'images/clear-night.svg');
+                        } else {
+                            $('.icon img').attr('src', iconURL);
+                        }
+
                     };
 
                     // run function to get icons

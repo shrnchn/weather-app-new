@@ -30,7 +30,21 @@ p {
 	}
 
 	.search {
+		margin: 50px auto 0 auto;
 		text-align: center;
+
+		a {
+			text-decoration: none;
+		}
+		
+		span {
+			@include opensans;
+			font-size: 15px;
+			font-size: 1.5rem;
+			color: white;
+			display: block;
+			margin: 30px auto 0 auto;
+		}
 
 		form.weather-form {
 			margin: 0 auto;
@@ -64,6 +78,7 @@ p {
 				outline: none;
 				text-align: center;
 				display: inline-block;
+				border-radius: 0;
 			}
 
 			input[type=submit] {

@@ -33,48 +33,55 @@ $(function() {
                           // return false;
                       } else {
 
-                          //empty out the error string
-                          $('.error').text('');
+                              //empty out the error string
+                              $('.error').text('');
 
-                          //storing the data in variable
-                          var w = data.current_observation;
+                              //storing the data in variable
+                              var w = data.current_observation;
 
+                              var forecast = w.weather;
+                              var location = w.display_location.full;
+                              var date = w.local_time_rfc822;
+                              var time = date.slice(17,19);
+                              var dateNoTime = date.slice(0,16);
+                              var temp = w.temp_c;
+                              var tempRounded = Math.round(temp);
+                              var feelsLike = w.feelslike_c;
+                              var feelsRounded = Math.round(feelsLike);
+                              var windDirection = w.wind_dir;
+                              var windSpeed = w.wind_kph;
+                              var windGust = w.wind_gust_kph;
+                              var humidity = w.relative_humidity;
+                              var precipitation = w.precip_today_metric;
 
-                          var forecast = w.weather;
-                          var location = w.display_location.full;
-                          var date = w.local_time_rfc822;
-                          var time = date.slice(16,25);
-                          var dateNoTime = date.slice(0,16);
-                          var temp = w.temp_c;
-                          var tempRounded = Math.round(temp);
-                          var feelsLike = w.feelslike_c;
-                          var feelsRounded = Math.round(feelsLike);
-                          var windDirection = w.wind_dir;
-                          var windSpeed = w.wind_kph;
-                          var windGust = w.wind_gust_kph;
-                          var humidity = w.relative_humidity;
-                          var precipitation = w.precip_today_metric;
+                              // dump string into the divs
+                              $('.forecast h2').text(forecast);
+                              $('.location h3').text(location);
+                              $('.date h3').text(dateNoTime);
+                              $('.degrees').text(tempRounded + '°C');
+                              $('.feels-like').text('Feels like ' + feelsRounded + '°C');
+                              $('.details .wds').text('Wind: ' + windDirection + ' ' + windSpeed + ' km/h');
+                              $('.details .wg').text('Wind Gust: ' + windGust);
+                              $('.details .h').text('Humidity: ' + humidity);
+                              $('.details .p').text('Precipitation: ' + precipitation);
 
-                          // dump string into the divs
-                          $('.forecast h2').text(forecast);
-                          $('.location h3').text(location);
-                          $('.date h3').text(dateNoTime);
-                          $('.degrees').text(tempRounded + '°C');
-                          $('.feels-like').text('Feels like ' + feelsRounded + '°C');
-                          $('.details .wds').text('Wind: ' + windDirection + ' ' + windSpeed + ' km/h');
-                          $('.details .wg').text('Wind Gust: ' + windGust);
-                          $('.details .h').text('Humidity: ' + humidity);
-                          $('.details .p').text('Precipitation: ' + precipitation);
+                              // display weather icons
+                              var getIcons = function(){
+                                  var iconURL = 'images/' + forecast.replace(/\s+/g,'').toLowerCase() + '.svg';
 
-                          // display weather icons
-                          var getIcons = function(){
-                              var iconURL = 'images/' + forecast.replace(/\s+/g,'').toLowerCase() + '.svg';
-                              $('.icon img').attr('src', iconURL);
-                          };
+                                  if (time >= 18 && forecast === 'Clear') {
+                                      $('.icon img').attr('src', 'images/clear-night.svg');
+                                  } else if (time >= 18 && forecast === 'Partly Cloudy') {
+                                      $('.icon img').attr('src', 'images/partlycloudy-night.svg');
+                                  } else {
+                                      $('.icon img').attr('src', iconURL);
+                                  }
 
-                          // run function to get icons
-                          getIcons();
-                      }
+                              };
+
+                              // run function to get icons
+                              getIcons();
+                          }
                   } // end success
 
               }); // end ajax
@@ -138,8 +145,10 @@ $(function() {
                     var getIcons = function(){
                         var iconURL = 'images/' + forecast.replace(/\s+/g,'').toLowerCase() + '.svg';
 
-                        if (time > 17 && forecast === 'Clear') {
+                        if (time >= 18 && forecast === 'Clear') {
                             $('.icon img').attr('src', 'images/clear-night.svg');
+                        } else if (time >= 18 && forecast === 'Partly Cloudy') {
+                            $('.icon img').attr('src', 'images/partlycloudy-night.svg');
                         } else {
                             $('.icon img').attr('src', iconURL);
                         }
